@@ -1,0 +1,14 @@
+name: 'ci'
+
+on:
+  schedule:
+    - cron: '0 13 * * 0,3'
+
+permissions: read-all
+
+jobs:
+  test-schedule:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 'Updates'
+        run: go run ./get-stars.go
