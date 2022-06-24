@@ -13,5 +13,6 @@ jobs:
   test-schedule:
     runs-on: ubuntu-22.04
     steps:
-      - name: 'Updates'
+      - uses: actions/checkout@v3
+      - name: 'Run Python Star Generator'
         run: ./bake run-python
