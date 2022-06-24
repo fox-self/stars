@@ -7,8 +7,6 @@ on:
   schedule:
     - cron: '0 13 * * 0,3'
 
-permissions: read-all
-
 jobs:
   star-generator:
     runs-on: ubuntu-22.04

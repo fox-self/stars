@@ -17,6 +17,7 @@ func handle(err error) {
 	}
 }
 
+// TODO: Replace [starred](https://github.com/maguowei/starred) with custom
 func main() {
 	err := dotenv.Load()
 	handle(err)
