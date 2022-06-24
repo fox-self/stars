@@ -1,9 +1,9 @@
 # shellcheck shell=bash
 
 task.run() {
-	starred --username hyperupcall --token "$TOKEN" --sort "$@" > './README.md'
+	go run .
 }
 
-task.rungo() {
-	go run .
+task.run-python() {
+	pipx run starred --username hyperupcall --token "$(<.env)" --sort "$@" > './README.md'
 }
