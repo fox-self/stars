@@ -5,5 +5,7 @@ task.run() {
 }
 
 task.run-python() {
-	pipx run starred --username hyperupcall --token "$(<.env)" --sort "$@" > './README.md'
+	token="$(<.env)"
+	
+	pipx run starred --username hyperupcall --token "$token" --sort "$@" > './README.md'
 }
