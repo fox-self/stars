@@ -13,8 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: 'Run Python Star Generator'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         run: ./bake run-python
       - uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          branch: '${{ github.ref }}'
+       
