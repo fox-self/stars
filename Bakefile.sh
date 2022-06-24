@@ -5,7 +5,8 @@ task.run() {
 }
 
 task.run-python() {
-	token="$(<.env)"
-	
+	local token="$GITHUB_TOKEN"
+	[ -z "$token" ] && token="$(<.env)"
+
 	pipx run starred --username hyperupcall --token "$token" --sort "$@" > './README.md'
 }
