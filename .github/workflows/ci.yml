@@ -10,7 +10,7 @@ on:
 permissions: read-all
 
 jobs:
-  test-schedule:
+  star-generator:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
